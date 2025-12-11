@@ -1,9 +1,9 @@
---- Build e Compilação (LIXO AUTOMÁTICO) ---
+--- Build e Compilação  ---
 
 [Bb]in/
 [Oo]bj/
 
---- Visual Studio e VS Code (SUAS CONFIGURAÇÕES) ---
+--- Visual Studio e VS Code  ---
 
 .vscode/
 .vs/
@@ -12,7 +12,7 @@
 *.userosscache
 *.sln.docstates
 
---- Banco de Dados SQLite (NÃO SUBIR O ARQUIVO FÍSICO) ---
+--- Banco de Dados SQLite  ---
 
 Subiremos apenas as Migrations para recriar o banco
 
