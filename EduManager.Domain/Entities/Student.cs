@@ -1,4 +1,4 @@
-public class Aluno : Pessoa
+public class Student : Person
 {
     public string Registration { get; set; } = string.Empty;
     public double Score1 { get; set; }
