@@ -1,4 +1,9 @@
-public class Director : Person
+using System;
+
+namespace EduManager.Domain.Entities
 {
-    public string Department { get; set; } = string.Empty;
+    public class Director : Person
+    {
+        public string Department { get; set; } = string.Empty;
+    }
 }

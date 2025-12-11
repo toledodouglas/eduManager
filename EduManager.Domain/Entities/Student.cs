@@ -1,21 +1,26 @@
-public class Student : Person
+using System;
+
+namespace EduManager.Domain.Entities
 {
-    public string Registration { get; set; } = string.Empty;
-    public double Score1 { get; set; }
-    public double Score2 { get; set; }
-    public double Score3 { get; set; }
-    public double GeneralAverage
+    public class Student : Person
     {
-        get 
+        public string Registration { get; set; } = string.Empty;
+        public double Score1 { get; set; }
+        public double Score2 { get; set; }
+        public double Score3 { get; set; }
+        public double GeneralAverage
         {
-            return (Score1 + Score2 + Score3) / 3;
+            get 
+            {
+                return (Score1 + Score2 + Score3) / 3;
+            }
         }
-    }
-    public bool IsApproved 
-    {
-        get 
+        public bool IsApproved 
         {
-            return GeneralAverage >= 7.0;
+            get 
+            {
+                return GeneralAverage >= 7.0;
+            }
         }
     }
 }
