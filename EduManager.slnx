@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="EduManager.API/EduManager.API.csproj" />
+  <Project Path="EduManager.Domain/EduManager.Domain.csproj" />
+  <Project Path="EduManager.Infrastructure/EduManager.Infrastructure.csproj" />
+</Solution>

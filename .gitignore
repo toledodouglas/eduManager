@@ -1,0 +1,30 @@
+--- Build e Compilação (LIXO AUTOMÁTICO) ---
+
+[Bb]in/
+[Oo]bj/
+
+--- Visual Studio e VS Code (SUAS CONFIGURAÇÕES) ---
+
+.vscode/
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+--- Banco de Dados SQLite (NÃO SUBIR O ARQUIVO FÍSICO) ---
+
+Subiremos apenas as Migrations para recriar o banco
+
+*.db
+*.db-shm
+*.db-wal
+
+--- Arquivos de Sistema Operacional ---
+
+.DS_Store
+Thumbs.db
+
+--- Logs e Arquivos Temporários ---
+
+*.log
