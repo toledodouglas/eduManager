@@ -12,5 +12,13 @@ namespace EduManager.Domain.Entities
 
         public DateTime DateRegistration { get; set; } = DateTime.Now;
 
+        public Person() {}
+        public Person(string name, int age, string email, string password)
+        {
+            Name = name;
+            Age = age;
+            Email = email;
+            Password = password;
+        }
     }
 }
