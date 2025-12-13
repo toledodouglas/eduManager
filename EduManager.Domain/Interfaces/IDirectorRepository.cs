@@ -4,8 +4,8 @@ using System.Threading.Tasks;
 
 namespace EduManager.Domain.interfaces
 {
-    public interface IStudentRepository : IRepository<Student>
+    public interface IDirectorRepository : IRepository<Director>
     {
-        Task<Student?> GetByRegistrationAsync(string registration);
+        Task<Director?> GetByDepartmentAsync(string department);
     }
 }
