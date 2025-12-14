@@ -10,7 +10,7 @@ namespace EduManager.Domain.Entities
         public List<Student> Students { get; set; } = new List<Student>();
 
         public Teacher() {}
-        public Teacher(string name, int age, string email, string password, string matter, decimal salary)
+        public Teacher(string name, int age, string email, string password, string subject, decimal salary)
             : base(name, age, email, password)
         {
             Subject = subject;

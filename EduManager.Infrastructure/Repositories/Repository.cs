@@ -27,16 +27,15 @@ namespace EduManager.Infrastructure.Repositories
             return await _dbSet.FindAsync(id);
         }
 
-        public async Task AddAsync(T entity)
+        public async Task<T> AddAsync(T entity)
         {
             try
             {
                 await _dbSet.AddAsync(entity);
                 await _context.SaveChangesAsync();
-                return $"{entity} added successfully";
 
+                return entity;  
                 Console.WriteLine($"[INFO] {typeof(T).Name} criado com sucesso.");
-                return entity;
             }
             catch (Exception ex)
             {
@@ -46,15 +45,15 @@ namespace EduManager.Infrastructure.Repositories
         }
         
 
-        public async Task UpdateAsync(T entity)
+        public async Task<T> UpdateAsync(T entity)
         {
             try
             {
             _dbSet.Update(entity);
             await _context.SaveChangesAsync();
 
-            Console.WriteLine($"[INFO] {typeof(T).Name} atualizado com sucesso.")
-            return $"{entity} updated successfully";
+            return entity;
+            Console.WriteLine($"[INFO] {typeof(T).Name} atualizado com sucesso.");
 
             }
             catch (Exception ex)
@@ -64,7 +63,7 @@ namespace EduManager.Infrastructure.Repositories
             }
         }
 
-        public async Task DeleteAsync(int id)
+        public async Task<T> DeleteAsync(int id)
         {
             var entity = await GetByIdAsync(id);
             if(entity != null)
@@ -72,8 +71,8 @@ namespace EduManager.Infrastructure.Repositories
                 _dbSet.Remove(entity);
                 await _context.SaveChangesAsync();
 
-                Console.WriteLine($"[INFO] {typeof(T).Name} deletado com sucesso.");
                 return entity;
+                Console.WriteLine($"[INFO] {typeof(T).Name} deletado com sucesso.");
             }
 
             Console.WriteLine($"[ERRO] {typeof(T).Name} com ID {id} não encontrado para deleção.");
