@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using EduManager.Domain.Entities;
 
+
 namespace EduManager.Domain.Interfaces
 {
-    public interface ITeacherRepository : IRepository<Teacher>
+    public interface IDirectorRepository : IRepository<Director>
     {
-        Task<Teacher?> GetByEmailAsync(string email);
+        Task<Director?> GetByDepartmentAsync(string department);
     }
 }
